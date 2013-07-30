@@ -1,0 +1,67 @@
+@import '_palette.styl'
+
+@font-face
+  font-family: 'BebasNeueRegular'
+  src: url("../fonts/BebasNeue.ttf")
+  src: url("../fonts/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue-webfont.woff") format("woff"), url("../fonts/BebasNeue-webfont.ttf") format("truetype"), url("../fonts/BebasNeue-webfont.svg#BebasNeueRegular") format("svg")
+  font-weight: normal
+  font-style: normal
+
+*
+  box-sizing: border-box
+
+body.stage
+  background-color: dark-black
+  color: white
+  font-family: 'Source Sans Pro', sans-serif
+  font-size: 100%
+  font-weight: 400
+  margin: 0
+  > header
+    height: 0px
+  > footer
+    height: 80px
+    background-color: dark-gray
+
+.panel:not(.active)
+  display: none
+
+.panel
+  > header
+    display: none
+    height: 0px
+    overflow: hidden
+    width: 100%
+  > footer
+    height: 80px
+    position: fixed
+  > article
+    background-color: bgColor
+    position: absolute
+    bottom: 80px
+    width: 100%
+    top: 0px
+
+// Fix the width for desktops
+@media handheld, screen and (min-width: 768px)
+  article.viewport, body.stage > header, body.stage > footer
+    width: 645px !important
+    margin-left: auto
+    margin-right: auto
+
+  .panel
+    > article
+      width: 645px !important
+      margin: auto
+
+// Alter font-size for smaller screens
+@media handheld, screen and (min-device-width: 320px) and (max-device-width: 480px), (min-width: 320px) and (max-width: 480px)
+  .panel
+    > article
+      bottom: 49px
+    > footer
+      height: 49px
+  body.stage
+    font-size: 68%
+    > footer
+      height: 49px

@@ -1,0 +1,171 @@
+@import '../_palette.styl'
+
+.gp-header
+  float: left
+  width: 80%
+  margin: 0 10% 0.333em 10%
+  font-size: 3em
+  font-family: 'BebasNeueRegular'
+  border-bottom: 1px solid yellow
+
+.gp-p
+  float: left
+  width: 80%
+  margin: 0 10% 1em 10%
+
+#loader
+  display: block
+  font-size: 1em
+  text-align: center
+  position: relative
+  width: 14em
+  margin: 0 auto
+  background-color: rgba(0,0,0,0.8)
+  color: yellow
+  border: 1px solid yellow
+  z-index: 9999
+  top: 10em
+  padding: 2em
+  border-radius: 1em
+  .text
+    font-size: 1.5em
+  i
+    font-size: 5em
+
+.logo
+  border-top: 13px solid yellow
+  text-align: center
+  font-family: 'BebasNeueRegular'
+  font-size: 8em
+  width: 100%
+  margin: 0
+  line-height: 0.8em
+  padding: 15px 0 0 0
+  white-space: nowrap
+  border-bottom: 13px solid yellow
+  background-color: (bgColor - 35%)
+
+.gray-btn
+  background-color: gray
+  color: white
+  width: 100%
+  border: 1px solid bgColor - 25%
+  text-shadow: 1px 1px dark-gray
+  box-shadow: 0 1px 0 0 light-gray inset
+  text-align: center
+  &:active
+    color: white - 10%
+    background-color: dark-gray
+    box-shadow: 0 2px 1px 0 (dark-gray - 15%) inset
+
+.frontpage-container
+  width: 80%
+  margin: 0 auto
+  text-align: center
+  font-size: 1em
+  .value-prop
+    width: 100%
+    text-align: center
+  .login-btn
+    display: block
+    margin: 0 auto
+    font-size: 1em
+    padding: 8px
+    @extend .gray-btn
+    &:active
+      color: white - 10%
+      background-color: dark-gray
+      box-shadow: 0 2px 1px 0 (dark-gray - 15%) inset
+  .hint
+    .error
+      background-color: #722828
+      color: white
+      padding: 0 2px
+    .highlight
+      color: yellow
+    float: left
+    width: 100%
+    text-align: justify
+  .or-prop
+    text-align: center
+    margin: 5px
+
+// Hide the navi-top-bar in this menu
+div.loginView header
+  display: none
+  overflow: hidden
+  height: 0px
+
+.navbar
+  float: left
+  width: 100%
+  height: 80px
+  overflow: hidden
+  padding: 0
+  margin: 0
+  border-top: 2px solid light-gray
+  .nav-item
+    float: left
+    width: 33.33%
+    .nav-btn
+      height: 80px
+      padding: 5px 0
+      color: white
+      float: left
+      font-size: 1em
+      width: 100%
+      border-left: 1px solid transparent
+      border-right: 1px solid transparent
+      border-top: 0
+      border-bottom: 0
+      background-color: dark-gray
+      text-align: center
+      text-shadow: 0px 1px light-black
+      .nav-icon
+        text-align: center
+        font-size: 2em
+        float: left
+        width: 100%
+      &:active, &.active
+        color: white - 10%
+        background-color: dark-gray - 10%
+    #feed
+      border-right: 1px solid (dark-gray - 25%)
+      &:active, &.active
+        border-left: 1px solid transparent
+        border-right: 1px solid (dark-gray - 40%)
+        box-shadow: -1px -1px 1px 1px (dark-gray - 25%) inset
+    #explore
+      border-left: 1px solid light-gray
+      border-right: 1px solid (dark-gray - 25%)
+      &:active, &.active
+        border-left: 1px solid (dark-gray - 40%)
+        border-right: 1px solid (dark-gray - 40%)
+        box-shadow: 0px -1px 1px 1px (dark-gray - 25%) inset
+    #submit
+      border-left: 1px solid light-gray
+      &:active, &.active
+        border-left: 1px solid (dark-gray - 40%)
+        border-right: 1px solid transparent
+        box-shadow: 1px -1px 1px 1px (dark-gray - 25%) inset
+
+@media handheld, screen and (min-device-width: 320px) and (max-device-width: 480px), (min-width: 320px) and (max-width: 480px)
+  p, div
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; /* Disable selection/copy in UIWebView */
+  .logo
+    margin: 0 auto
+    padding: 8px 0 0 0
+    border-width: 4px
+    font-size: 5em
+  .navbar
+    height: 49px
+    .nav-item
+      height: 49px
+      padding: 0
+      .nav-btn
+        height: 49px
+  .submitView
+    .submit-btn
+      bottom: 49px
+

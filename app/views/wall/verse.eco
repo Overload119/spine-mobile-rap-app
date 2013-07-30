@@ -1,0 +1,52 @@
+<div class="container">
+
+  <div class="user-bar">
+    <button class="back-btn">
+      <i class="icon-reply"></i>
+    </button>
+    <img class="user-image" src="http://icons.iconarchive.com/icons/rokey/popo-emotions/128/rap-icon.png" />
+    <div class="user-name">
+      <h1>MacMiller</h1>
+      <h3>22 reputation</h3>
+    </div>
+  </div>
+
+  <div class="verse">
+    <div class="verse-tags">
+      <% for tag in @tags: %>
+        <span class="tag"><%= tag %></span>
+      <% end %>
+    </div>
+    <div class="verse-bars">
+      <% wordCount = 0 %>
+      <% for line in @lines: %>
+        <p class="bar">
+          <% for word in line.split(' '): %>
+            <span id="w<%= wordCount %>"><%= word %></span>
+            <% wordCount = wordCount + 1 %>
+          <% end %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="interaction-bar">
+    <div class="like-container">
+      <span class="like-count"><%= Math.floor(Math.random() * 400) %></span>
+      <button class="like-btn gray-btn">
+        <i class="icon-thumbs-up-alt"></i>
+      </button>
+    </div>
+
+    <div class="analyze-container">
+      <button class="analyze-btn gray-btn">
+        <div class="content">
+          <i class="icon-gears"></i> Analyze
+        </div>
+        <div class="results">
+          23.4 RhymeRank &trade;
+        </div>
+      </button>
+    </div>
+  </div>
+</div>

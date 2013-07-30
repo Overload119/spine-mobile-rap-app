@@ -1,0 +1,33 @@
+<div class="verse-container">
+  <% for i in [0..30]: %>
+    <div class="verse-block">
+      <div class="user-verse">
+
+        <div class="user-image">
+          <img class="picture" src="https://si0.twimg.com/profile_images/3544395987/242bd36e3824f7974764d971ab593ea0.png" />
+          <div class="score">
+            <span id="reputation"><%= i + Math.floor(Math.random() * 500) %></span>
+          </div>
+          <div class="like-container">
+            <button class="like-btn"><i class="icon-thumbs-up-alt"></i></button>
+          </div>
+        </div>
+
+        <div class="author">
+          <%= 'usernum' + i.toString() %> · <%= Math.floor( Math.random() * 500 ) %> reputation
+          <span class="more-btn">
+            <i class="icon-share"></i>
+          </span>
+        </div>
+        <div class="verses">
+          <% for line in ['Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 'Proin vel augue pretium, condimentum urna vel, tempus nulla.', 'Nunc sollicitudin mauris non sollicitudin consequat.', 'Curabitur suscipit est sed purus feugiat, nec porta velit semper.']: %>
+            <% if Math.random() < 0.5: %>
+              <p><%= line %></p>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+  <% end %>
+</div>

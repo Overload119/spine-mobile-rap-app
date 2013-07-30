@@ -1,0 +1,169 @@
+@import '../_palette.styl'
+@import '../_misc.styl'
+
+.wallFeedView
+  header
+    display: block
+    height: auto
+  article
+    top: 45px
+    bottom: 80px
+
+@media handheld, screen and (min-device-width: 320px) and (max-device-width: 480px), (min-width: 320px) and (max-width: 480px)
+  .wallFeedView
+    article
+      top: 30px
+      bottom: 49px
+
+.filter
+  width: 100%
+  font-size: 1.3em
+  padding: 0.4em 0.7em
+  background-color: dark-gray
+  text-shadow: 0px 1px light-black
+  text-align: center
+  border-bottom: 1px solid light-gray
+  p
+    float: left
+    width: 100%
+    margin: 0
+  .sort-bar-container
+    display: inline-block
+    width: 4em
+    height: 1em
+    text-align: center
+    .sort-option
+      display: inline-block
+      cursor: pointer
+      background-color: blue
+      text-shadow: 1px 1px (blue - 30%)
+      border-radius: 4px
+      padding: 0 10px
+      box-shadow: 0 1px 0px 0px (blue + 20%) inset
+      border: 0
+      border-bottom: 2px solid (blue - 15%)
+      &.activate
+        height: 1em
+      &:not(.active)
+        height: 0
+
+.wallFeedView .verse-container
+  float: left
+  width: 100%
+  .separator
+    height: 0px
+    width: 98%
+    float: left
+    border-top: 2px dashed (black + 3%)
+    margin: 1em 1%
+  .verse-block
+    float: left
+    font-size: 1.2em
+    width: 100%
+    padding: 0 0.5em 0.5em 0.5em
+    overflow: hidden
+    .user-verse
+      float: left
+      width: 100%
+      padding: 0.5em
+      margin: 0
+      background-color: (bgColor - 15%)
+      .user-image
+        float: left
+        width: 15%
+        .picture
+          float: left
+          width: 100%
+          border: 1px solid yellow
+          border-radius: 3px 3px 0 0
+        .score
+          float: left
+          width: 100%
+          border: 1px solid yellow
+          border-bottom-color: tan
+          text-align: center
+          font-size: 0.9em
+          position: relative
+          margin-top: 0.5em
+          background-color: yellow
+          font-family: 'BebasNeueRegular'
+          color: black
+        .like-container
+          .like-btn
+            float: left
+            width: 100%
+            border: 1px solid yellow
+            border-top: 0
+            margin: 0
+            font-size: 1em
+            line-height: 2em
+            height: 2em
+            text-align: center
+            position: relative
+            background-color: (bgColor - 25%)
+            color: yellow
+            &.apply-like
+              i
+                animation: like 500ms ease-in-out
+              color: black
+              background-color: yellow
+              transition: color 500ms
+              transition: background-color 500ms
+      .author
+        width: 81%
+        float: left
+        text-align: left
+        color: yellow
+        margin: 0 2%
+        padding: 0
+        font-size: 1.1em
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+        border-bottom: 1px solid tan
+        .more-btn
+          float: right
+          padding: 0 0.5em
+          text-align: center
+          border: 0
+          &:active
+            background-color: yellow
+            color: black
+      .verses
+        float: left
+        width: 81%
+        margin: 0
+        padding: 0 2%
+        text-align: justify
+        p
+          font-size: 0.9em
+          float: left
+          width: 100%
+          padding: 0
+          margin: 1px 0
+          &:after
+            content: "//"
+            color: dark-gray
+            padding-left: 2px
+
+@keyframes like
+  0%
+    background-color: transparent
+    color: white
+    font-size: 1em
+  30%
+    font-size: 1.5em
+  60%
+    font-size: 0.8em
+  80%
+    font-size: 1em
+  100%
+    color: black
+
+
+
+
+
+
+
+

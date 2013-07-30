@@ -1,0 +1,23 @@
+<p class="submit-verse">Submit Your Verse</p>
+<p class="simple">Fill out the text areas below to write a verse. <br/>You may fill out 2-4 lines.</p>
+
+<div class="lines">
+  <input id="line_1" class="line-entry one" type="textbox" />
+  <input id="line_2" class="line-entry two" type="textbox" />
+  <input id="line_3" class="line-entry three" type="textbox" />
+  <input id="line_4" class="line-entry four" type="textbox" />
+</div>
+
+<p class="simple">Use hashtags to help discover find your verses. Hashtags are the major topics your verse is about.</p>
+<div class="hashtag-container">
+  <span class="hashtag-indicator">#</span>
+  <input class="hashtag-txt" type="textbox" />
+  <button class="hashtag-add-btn">Add</button>
+  <ul class="hashtag-tags">
+    <li>fag</li>
+    <li>topic</li>
+    <li>hashtagnigga</li>
+  </ul>
+</div>
+
+<button id="submit-btn" class="submit-btn">Submit</button>

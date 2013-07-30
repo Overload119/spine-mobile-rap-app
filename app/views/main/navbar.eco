@@ -1,0 +1,37 @@
+<div class="navbar">
+  <div class="nav-item">
+    <button class="nav-btn" id="feed">
+      <span class="nav-icon">
+        <i class="icon-tasks"></i>
+      </span>
+      <br/>
+      <span class="nav-title">
+        The Wall
+      </span>
+    </button>
+  </div>
+
+  <div class="nav-item">
+    <button class="nav-btn" id="explore">
+      <span class="nav-icon">
+        <i class="icon-globe"></i>
+      </span>
+      <br/>
+      <span class="nav-title">
+        Explore
+      </span>
+    </button>
+  </div>
+
+  <div class="nav-item">
+    <button class="nav-btn" id="submit">
+      <span class="nav-icon">
+        <i class="icon-pencil"></i>
+      </span>
+      <br/>
+      <span class="nav-title">
+        Submit
+      </span>
+    </button>
+  </div>
+</div>

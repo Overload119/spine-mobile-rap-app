@@ -1,0 +1,31 @@
+@import '../_palette.styl'
+
+.signup-form
+  width: 100%
+  margin: 0
+  padding: 0
+  border: 1px solid black
+  float: left
+  .login-btn
+    width: 50%
+    float: left
+    margin: 0
+    font-size: 1em
+  .signup-input
+    width: 100%
+    background-color: bgColor - 15%
+    outline: none
+    float: left
+    border-radius: 0
+    font-size: 1em
+    margin: 0
+    color: white
+    border: 0
+    border-bottom: 1px solid bgColor - 30%
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.15) inset
+    padding: 2px
+
+@media handheld, screen and (min-device-width: 480px), and (max-width: 480px)
+  .signup-form
+    .signup-input
+      padding: 0.5em

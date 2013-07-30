@@ -1,0 +1,9 @@
+<div class="filter">
+  Showing the
+    <div class="sort-bar-container">
+      <span class="sort-option active">newest</span>
+      <span class="sort-option">hottest</span>
+      <span class="sort-option">best</span>
+    </div>
+  verses...
+</div>

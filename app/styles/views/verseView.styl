@@ -1,0 +1,176 @@
+@import '../_palette.styl'
+@import '../_misc.styl'
+
+.verseView .container
+  width: 100%
+  float: left
+  .verse
+    float: left
+    width: 95%
+    margin: 1em 2.5%
+    background-color: (bgColor - 15%)
+    .verse-tags
+      float: left
+      width: 100%
+      background-color: (bgColor - 30%)
+      text-overflow: ellipsis
+      white-space: nowrap
+      overflow: hidden
+      text-align: center
+      .tag
+        color: yellow
+        &:before
+          content: "#"
+          color: yellow
+    .verse-bars
+      float: left
+      width: 100%
+      line-height: 1em
+      font-size: 1.5em
+      border: 1px solid (bgColor - 30%)
+      border-top: 0
+      p.bar:nth-child(odd)
+        background-color: (bgColor - 13%)
+      p.bar
+        margin: 0
+        padding: 0.35em 0.5em
+        span.col-blue
+          border-bottom-color: #E8670C
+        span.col-red
+          border-bottom-color: #FF0000
+        span.col-orange
+          border-bottom-color: #E8670C
+        span.col-gray
+          border-bottom-color: #B50CE8
+        span.col-pink
+          border-bottom-color: #0D0FFF
+        span
+          display: inline-block
+          -webkit-transition: border-color 1s
+          -moz-transition: border-color 1s
+          transition: border-color 1s
+          border-bottom: 3px solid transparent
+
+  .user-bar
+    float: left
+    width: 95%
+    border-bottom: 1px solid yellow
+    margin: 0 2.5%
+    height: 4em
+    .user-image
+      float: right
+      background-color: black + 5%
+      margin-left: 15px
+      height: 100%
+    .back-btn
+      float: left
+      color: yellow
+      border: 0
+      padding: 0
+      margin: 0
+      width: 2em
+      height: 2em
+      font-size: 1em
+      background-color: transparent
+      &:active
+        background-color: yellow
+        color: black
+    .user-name
+      color: yellow
+      float: left
+      padding-left: 1%
+      line-height: 2em
+      vertical-align: text-top
+      text-shadow: 1px 1px 1px black
+      h1
+        float: left
+        width: 100%
+        overflow: hidden
+        text-overflow: ellipsis
+        font-size: 2em
+        margin: 0 0 1px 0
+        vertical-align: text-top
+      h3
+        float: left
+        width: 100%
+        overflow: hidden
+        text-overflow: ellipsis
+        font-size: 1.1em
+        margin: 0
+        vertical-align: text-top
+  .interaction-bar
+    float: left
+    width: 95%
+    margin: 0 2.5%
+    border-top: 1px solid yellow
+    padding-top: 1em
+    font-size: 1em
+    .analyze-container
+      float: right
+      width: 45%
+      color: white
+      .analyze-btn
+        float: left
+        width: 100%
+        padding: 0
+        line-height: 2em
+        font-size: 1em
+        height: 3em
+        .content
+          float: left
+          width: 100%
+          height: 100%
+          line-height: 3em
+          transition: width 300ms
+          overflow: hidden
+        .results
+          float: left
+          width: 0px
+          height: 0px
+          transition: width 300ms
+          overflow: hidden
+        &.apply-analyze
+          background-color: dark-gray
+          box-shadow: 0 2px 1px 0 (dark-gray - 15%) inset
+          .content
+            width: 0px
+            height: 100%
+            white-space: nowrap
+            transition: width 300ms
+            overflow: hidden
+          .results
+            width: 100%
+            height: 100%
+            line-height: 3em
+            transition: width 300ms
+            overflow: hidden
+            color: white
+            text-decoration: underline
+    .like-container
+      float: left
+      width: 45%
+      border: 1px solid (bgColor - 25%)
+      padding: 0
+      margin: 0
+      height: 3em
+      background-color: rgba(0,0,0,0.02)
+      box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.15) inset
+      .like-count
+        float: left
+        width: 60%
+        text-align: right
+        font-size: 2em
+        padding-right: 4px
+        height: 100%
+        line-height: 1.5em
+        font-family: 'BebasNeueRegular'
+      .like-btn
+        float: right
+        width: 40%
+        font-size: 1em
+        border: 0
+        text-align: center
+        color: white
+        border-left: 1px solid (bgColor - 25%)
+        height: 100%
+

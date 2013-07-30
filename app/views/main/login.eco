@@ -1,0 +1,19 @@
+<h1 class="logo">RAP WALL</h1>
+
+<div class="frontpage-container">
+  <p class="value-prop">
+    Share and discover the best verses in the rap game.
+  </p>
+
+  <button class="login-btn" id="nologin">Check It Out <i class="icon-long-arrow-right"></i></button>
+  <p class="or-prop">- OR -</p>
+
+  <div class="signup-form">
+    <input id="username" class="signup-input" type="text" placeholder="Username"/>
+    <input id="password" class="signup-input" type="password" placeholder="Password" />
+    <button class="login-btn" id="login">Login</button>
+    <button class="login-btn" id="signup">Sign Up</button>
+  </div>
+
+  <p class="hint"><span class="highlight">Tip</span>: Type a desired username and password above then click Sign Up to create an account.</p>
+</div>
